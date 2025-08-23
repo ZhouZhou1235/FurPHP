@@ -1,0 +1,21 @@
+{
+    "system-name": "",
+    "system-info": "",
+    "database-mysql": {
+        "host": "",
+        "user": "",
+        "password": "",
+        "database": ""
+    },
+    "local-file-hub": {
+        "root": ""
+    },
+    "mailer": {
+        "host": "",
+        "service": "",
+        "auth": {
+            "user": "",
+            "pass": ""
+        }
+    }
+}

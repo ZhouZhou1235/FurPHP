@@ -1,0 +1,11 @@
+{
+    "table-name":"",
+    "routes":[
+        {
+            "method":"GET",
+            "path":"/",
+            "controller":"MainController",
+            "action":"home"
+        }
+    ]
+}

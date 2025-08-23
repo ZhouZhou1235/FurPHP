@@ -1,0 +1,11 @@
+{
+    "table-name":"",
+    "routes":[
+        {
+            "method":"",
+            "path":"",
+            "controller":"",
+            "action":""
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "system-name": "FurPHP",
+    "system-info": "a personal simple php framework by pinkcandyzhou",
+    "database-mysql": {
+        "host": "localhost",
+        "user": "root",
+        "password": "123456",
+        "database": "pinkcandy_gallery4"
+    },
+    "local-file-hub": {
+        "root": ""
+    },
+    "mailer": {
+        "host": "",
+        "service": "",
+        "auth": {
+            "user": "",
+            "pass": ""
+        }
+    }
+}
