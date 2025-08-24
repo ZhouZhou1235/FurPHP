@@ -1,4 +1,4 @@
-![FurPHP](/app/assets/FurPHP.png)
+<img src='/app/assets/FurPHP.png' alt='FurPHP' style='width:50%;'>
 
 # FurPHP
 ## 茸毛 - 周周设计的简易php框架
@@ -13,7 +13,7 @@
 - 根目录启动php内置web服务器 ```php -S localhost:80```
 
 ### 部署
-放置代码到一个生产服务器（如apache/aginx）,支持php，启动web服务即可。
+放置代码到一个生产服务器（如apache/nginx）,支持php，启动web服务即可。
 
 ### 开发进度
 2025.8.23 FurPHP项目创建
