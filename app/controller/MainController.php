@@ -4,7 +4,7 @@
 
 class MainController extends Controller {
     public function home(){
-        $html = file_get_contents(FUR_PATH_VIEW.'home.html');
+        $html = file_get_contents(APP_PATH_VIEW.'home.html');
         return $this->TextResponse($html);
     }
 }

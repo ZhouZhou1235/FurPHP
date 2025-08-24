@@ -7,14 +7,15 @@ class IOMachine {
     protected Router $router; // 路由
     public function __construct(){
         $this->initMachine(
-            FUR_PATH_CONFIG.'config.json',
-            FUR_PATH_CONFIG.'route_table.json'
+            APP_PATH_CONFIG.'config.json',
+            APP_PATH_CONFIG.'route_table.json'
         );
     }
     /**
      * 初始化机器 
      */
     public function initMachine($configFilePath,$routeFilePath){
+        session_start();
         $this->config = new Config($configFilePath,$routeFilePath);
         $this->router = new Router();
         $routes = $this->router->createRoutes(
@@ -27,7 +28,7 @@ class IOMachine {
      * 接收请求
      * @return array
      */
-    public function requestInput(){
+    public static function requestInput(){
         return [
             'method' => $_SERVER['REQUEST_METHOD']??'GET',
             'uri' => parse_url(url:$_SERVER['REQUEST_URI']??'/',component:PHP_URL_PATH),
@@ -45,7 +46,6 @@ class IOMachine {
      * @return int
      */
     public function process(){
-        session_start();
         $request = $this->requestInput();
         $response = null;
         try{

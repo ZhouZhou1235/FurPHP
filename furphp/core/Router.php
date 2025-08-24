@@ -20,7 +20,7 @@ class Router {
             strtolower($controllerName).'Controller.php'
         ];
         foreach($possibleFiles as $filename){
-            $filePath = FUR_PATH_CONTROLLER.$filename;
+            $filePath = APP_PATH_CONTROLLER.$filename;
             if(file_exists($filePath)){
                 require_once $filePath;
                 $className = $this->getClassNameFromFilename($filename,$controllerName);
@@ -119,11 +119,11 @@ class Router {
      */
     public function getAvailableControllers(): array {
         $controllers = [];
-        if (is_dir(FUR_PATH_CONTROLLER)){
-            $files = scandir(FUR_PATH_CONTROLLER);
+        if (is_dir(APP_PATH_CONTROLLER)){
+            $files = scandir(APP_PATH_CONTROLLER);
             foreach ($files as $file){
                 if (pathinfo($file,PATHINFO_EXTENSION)=='php'){
-                    $filePath = (string)FUR_PATH_CONTROLLER.$file;
+                    $filePath = (string)APP_PATH_CONTROLLER.$file;
                     require_once $filePath;
                     $className = pathinfo($file,PATHINFO_FILENAME);
                     if(class_exists($className)){
